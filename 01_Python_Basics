@@ -3,17 +3,25 @@
 增加：xxx.append('x')将x元素添加到xxx列表末尾。
 插入：xxx.insert(0,'x')在索引0处添加x元素。
 删除：del xxx[0]知道要删除的元素在列表的位置，可以用del语句。
-     y=xxx.pop() pop()可以删除列表末尾，并且可以接着使用该元素。
-     xxx.remove('y') remove()可以删掉列表中对应值的元素。
-修改：xxx[0] = 'y' 
+     y=xxx.pop()，pop()可以删除列表末尾，并且可以接着使用该元素。
+     xxx.remove('y')，remove()可以删掉列表中对应值的元素。
+修改：xxx[0] = 'y' 可直接修改。
 1.2列表的排序
-xxx.sort()永久性排序，按字母排序；sorted(xxx)临时排序；xxx.sort(reverse=True)
-反转列表位置xxx.reverse()
-列表排序 len(xxx)
+永久性排序：xxx.sort()，按字母排序，xxx.sort(reverse=True)，反向排序；
+临时性排序：sorted(xxx)，按字母排序，sorted(xxx,reverse=True)，反向排序；
+反转列表位置：xxx.reverse()，没有排序直接按照原位置反转。
+列表元素计数：len(xxx)。
 
 二、列表的操作
 2.1遍历列表
+for i in xxx:
 2.2数值列表的创建
+xxx = list(range(a,b,c)),a代表起始位置，b代表末尾-1，c为步长（省略的话，步长为1）。
+有专门用于处理数字列表的Python函数如：min(),max(),sum()。
+列表解析：xxx = [value**2 for value in range(1,11)]     相当于     squares = [] 
+                                                                  for value in range(1,11): 
+                                                                  square = value**2 
+                                                                  squares.append(square)
 2.3列表切片
 2.4元组
 三、if语句

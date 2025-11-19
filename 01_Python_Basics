@@ -7,8 +7,7 @@
      xxx.remove('y') remove()可以删掉列表中对应值的元素。
 修改：xxx[0] = 'y' 
 1.2列表的排序
-xxx.sort()永久性排序，按字母排序。
-sorted(xxx)临时排序。
+xxx.sort()永久性排序，按字母排序；sorted(xxx)临时排序；xxx.sort(reverse=True)
 反转列表位置xxx.reverse()
 列表排序 len(xxx)
 

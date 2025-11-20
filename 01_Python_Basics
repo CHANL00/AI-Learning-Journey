@@ -23,7 +23,9 @@ xxx = list(range(a,b,c)),a代表起始位置，b代表末尾-1，c为步长（�
                                                                   square = value**2 
                                                                   squares.append(square)
 2.3列表切片
+players[a:b]，ab为数值，a代表起始位置（省略的话，从起始位置开始），b代表末尾-1
 2.4元组
+
 三、if语句
 3.1条件测试
 3.2if语句

@@ -66,7 +66,14 @@ set3=set1.unior(set2)          两个集合合并。
 #定义空字典:dict1={}     dict1=dict()
 #定义字典变量：dict1={Key1:Value,Key2:Value,Key3:Value}
 字典可以通过Key获取Value ：dict1[Key1]
-1.7.2遍历字典
+1.7.2字典常用操作
+dict1["xxx"]=元素     如"xxx"不存在于dict1中就是新增元素；存在就是更新元素。
+删除元素 ：x=字典.pop(Key)     获取指定Key的Value，同时字典被修改，指定Key的数据被删除。
+清空字典 ：字典.clear()。
+获取全部的Key ：字典.keys()。
+遍历字典 ：(1)for key in dict1.keys():
+           (2)for key in dict1:
+统计字典中的元素数量 ：len(dict1)
 
 1.7.3嵌套     字典的Key和Value可以是任意数据类型(Key不可以为字典)
 #从嵌套字典中获取数据

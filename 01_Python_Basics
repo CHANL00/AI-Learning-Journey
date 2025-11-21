@@ -25,9 +25,10 @@ xxx = list(range(a,b,c)),a代表起始位置，b代表末尾-1，c为步长（�
 有专门用于处理数字列表的Python函数如：min(),max(),sum()。
 列表解析：xxx = [value**2 for value in range(1,11)]     相当于     squares = [] 
                                                                   for value in range(1,11): 
-                                                                  square = value**2                                                                  squares.append(square)
+                                                                       square = value**2                                                                  
+                                                                       squares.append(square)
 
-1.3元组()      和列表基本相同，唯一不同在于不可修改。
+1.3元组() tuple     和列表基本相同，唯一不同在于不可修改。
 1.3.1定义元组
 t1=(1,'a',True),t2=(),t3=tuple()。定义单个元素的元组需要加‘，’：t4=('a',)。
 1.3.2元组的相关操作
@@ -36,9 +37,9 @@ count(元素)统计某个数据在当前元组出现的次数。
 len(元组)统计元组内的元素个数。
 """元组内的元素不可修改，但嵌套下的元组内的列表内的元素可以修改"""
 
-1.4字符串str     字符串是不可变的
+1.4字符串str""     字符串是不可变的。
 1.4.1字符串的操作
-字符串.index(字符串) ：查找给定字符的第一个匹配项的下标
+字符串.index(字符串) ：查找给定字符的第一个匹配项的下标。
 字符串.replace(字符串1，字符串2) ：将字符串内的匹配的全部字符串1，替换为字符串2，得到新的字符串。
 字符串.split(字符串1) :按照给定字符串1，对字符串进行分离，得到一个新的列表。
 字符串.strip() :移除首尾的空格和换行符 ;字符串.strip(字符串1) :移除首尾指定字符串1 。
@@ -48,12 +49,28 @@ len(字符串) ：统计字符串的字符个数。
 1.5序列的切片     列表、元组、字符串都属于序列
 players[a:b:c]，abc为数值，a代表起始位置（省略的话，从起始位置开始），b代表末尾-1（省略的话，到末尾位置结束）,c代表步长（省略为1，可以为负数）。
 复制列表：friend_foods = my_foods[:]
-1.6集合set
 
-1.7字典dict
+1.6集合{} set()     无序存储，去重不允许重复的数据存在，不支持下标索引。
+#定义空集合:set()
+集合.add(元素) 添加新元素到集合。
+集合.remove(元素) 移除元素。
+集合.pop() 随机取出元素。
+集合.clear() 清空集合。
+set3=set1.difference(set2)     取出set1和set2的差集，set1中set2没有的元素。
+set1.difference_update(set2)   消除set1中和set2相同的元素。
+set3=set1.unior(set2)          两个集合合并。
+统计集合中的元素数量 ：len(set1)。
+
+1.7字典{} dict     Key:Value     Key不可以重复     不可以下标索引
 1.7.1字典的使用
+#定义空字典:dict1={}     dict1=dict()
+#定义字典变量：dict1={Key1:Value,Key2:Value,Key3:Value}
+字典可以通过Key获取Value ：dict1[Key1]
 1.7.2遍历字典
-1.7.3嵌套
+
+1.7.3嵌套     字典的Key和Value可以是任意数据类型(Key不可以为字典)
+#从嵌套字典中获取数据
+#获取xxx的语文信息 ： score_dict={"xxx":{"语文":99, "数学":88, "英语":77}}     score=score_dict["xxx"]["语文"]
 三、if语句
 3.1条件测试
 3.2if语句

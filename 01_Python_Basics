@@ -143,12 +143,17 @@ encoding:编码格式(推荐UTF-8)。
 with open(name,mode,encoding) as 文件对象：     对文件进行操作后自动关闭文件。
      语句块
 (2)读写文件
+读取：
 文件对象.read(num):num表示要从文件中读取的数据的长度。
 文件对象.readlines():可以按照行的方式把整个文件的内容一次性读取，返回一个列表，每一行为一个元素。
 文件对象.readline():一次读一行。
 for line in open(name,mode,encoding):     for循环读取文件行。
      语句块
+
+写入：
+文件对象.write():写入内容。
+文件对象.flush():刷新内容到硬件中。
 (3)关闭文件
-文件对象.close():关闭文件。
+文件对象.close():带有flush()方法功能，保存并关闭文件。
 
 

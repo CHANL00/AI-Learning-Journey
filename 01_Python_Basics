@@ -156,4 +156,45 @@ for line in open(name,mode,encoding):     for循环读取文件行。
 (3)关闭文件
 文件对象.close():带有flush()方法功能，保存并关闭文件。
 
+六、异常
+6.1捕获常规异常
+try：
+     可能发生错误的代码
+except：
+     如果出现异常执行的代码
+
+6.2捕获指定异常
+try:
+     print(name)
+except NameError as e:
+     print('name变量名称未定义错误')
+
+6.3捕获多个异常
+try:
+     print(1/0)
+except (NameError,ZeroDivisionError):
+     print('ZeroDivision错误')
+6.4总结
+1.在可能发生异常的地方进行捕获。当异常出现的时候，提供解决的方式，而不是任由其导致程序无法运行。
+2.捕获异常的语法
+try:
+     可能发生异常的语句
+except[异常 as 别名]:
+[else:]
+     未出现异常时应做的事情。
+[finally:]
+     出没出现异常都应做的事情。
+3.捕获所有异常
+except:/except Exception：
+
+
+
+
+
+
+
+
+
+
+
 

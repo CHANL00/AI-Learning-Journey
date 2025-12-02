@@ -241,6 +241,25 @@ pip install 包名称
 3. __all_变量的作用
 同模块中学习到的是一个作用，控制import *能够导入的内容。
 
+八、JSON
+8.1Python数据和Json数据的相互转化
+#导入json模块 import json
+#准备符合格式json格式要求的python数据
+data = [{"name": "老王", "age": 16}, {"name": "张三", "age": 20}]
+# 通过 json.dumps(data)方法把python数据转化为了json数据 
+data =json.dumps(data)
+#通过 json.loads(data)方法把json数据转化为了python数据 
+data = json.loads(data)
+
+8.2总结
+1.json: 是一种轻量级的数据交互格式,采用完全独立于编程语言的文本格式来存储和表示数据(就是字符串)
+Python语言使用JSON有很大优势，因为:JSON无非就是一个单独的字典或一个内部元素都是字典的列表
+2.json格式数据转化	
+所以JSON可以直接和Python的字典或列表进行无缝转换。	
+通过json.dumps(data)方法把python数据转化为了json数据
+data = json.dumps (data)
+如果有中文可以带上:ensure_ascii=False参数来确保中文正常转换
+通过json. loads(data)方法把josn数据转化为了python列表或字典
 
 
 

@@ -1,1 +1,47 @@
+import numpy
+一、创建ndarray
+ndarray是NumPy中表式数组的重要类型
+1.使用np.array()创建
+参数为列表：[1,4,2,3,5,6]
+默认ndarray的所有元素的类型是相同的。
+传进来的列表中包含不同类型，则统一为一个类型，优先级：str>float>int
 
+2.使用np的routines函数创建
+1）np.ones(shape,dtype=None,order='C')
+创建一个所有元素都为1的多维数组。
+n=np.ones(shape=(3,4,5),dtype=np.int16)
+参数说明：
+  shape：形状
+  dtype=None：元素类型
+  order：{‘C','F'},可选，默认值：C是否在内存中以行主(C-风格)或列主(Fortran-风格)顺序存储多维数据，一般默认即可。
+2）np.zeros(shape,dtype=float,order='C')
+创建一个所有元素都为0的多维数组。
+参数说明：
+  shape：形状
+  dtype=None:元素类型
+n=np.zeros(shape=(3,4),dtype=np.int16,order='C')
+3）np.full(shape,fill_value,dtype=None,order='C')
+创建一个所有元素都为指定元素的多维数组。
+参数说明：
+  shape：形状
+  fill_value:填充值
+  dtype=None:元素类型
+n=np.full(shape=(3,4),fill_value=1,dtype=np.int16,order='C')
+4）np.eye(N,M=None,k=0,dtype=float)
+对角线为1其他的位置为0的二维数组。
+参数说明：
+  N:行数
+  M：列数，默认为None，表示和行数一样
+  k=0:向右偏移0个位置
+  dtype=None：元素类型
+
+5）np.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None)
+创建一个等差数列
+参数说明：
+  start:开始值
+  stop:结束值
+  num=50:等差数列中默认有50个数
+  endpoint=True:是否包含结束值
+  retstep=False:是否返回等差值(步长)
+  dtype=None:元素类型
+n=np.linspace(0,100,num=21,dtype=np.int16)

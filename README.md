@@ -41,14 +41,23 @@ My vision is to build **autonomous AI workflows** capable of continuous self-imp
 
 ---
 
+## 📍 学习进度 | Current Progress
+
+[数据分析笔记](04_Data%20analysis)记录到了 NumPy 数组创建。下一步用 Pandas 清洗和分析一份真实数据，再用同一份数据练习机器学习的训练、评估和复现。
+
+[查看机器学习入门路线](05_Machine_Learning/README.md)
+
+---
+
 ## 🗂️ 仓库结构 | Repository Structure
 
-```bash
+```text
 AI-Learning-Journey/
-├── README.md                  # 项目说明 (This file)
-├── 01_Python_Basics/          # Python学习记录
-├── 02_Data_Analysis/          # 数据清洗与可视化
-├── 03_Machine_Learning/       # 机器学习实验
-├── 04_Deep_Learning/          # 深度学习项目
-├── 05_AI_Workflow_Automation/ # AI自动化系统
-└── notes/                     # 学习笔记与思考
+├── README.md
+├── 01_Python_Basics
+├── 02_data structure
+├── 03_principles of computer composition
+├── 04_Data analysis
+└── 05_Machine_Learning/
+    └── README.md
+```
